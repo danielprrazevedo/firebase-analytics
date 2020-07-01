@@ -50,7 +50,18 @@ export class FirebaseAnalyticsWeb extends WebPlugin
     screenName: string;
     nameOverride: string;
   }): Promise<void> {
-    return new Promise((resolve, _reject) => resolve);
+    return new Promise((resolve, reject) => {
+      if (firebase && firebase.analytics) {
+        reject("firebase is not initialized");
+      }
+      if (_options.screenName) {
+        const analytics = firebase.analytics();
+        analytics.setCurrentScreen(_options.screenName);
+        resolve();
+      } else {
+        reject("userName is missing");
+      }
+    });
   }
 
   reset(): Promise<void> {
