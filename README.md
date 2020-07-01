@@ -83,7 +83,7 @@ git checkout -b firebase-analytics
 | setUserId        | ✅      | ✅  | ✅  |
 | setUserProperty  | ✅      | ✅  | ✅  |
 | getAppInstanceId | ✅      | ✅  | ❌  |
-| setScreenName    | ✅      | ✅  | ❌  |
+| setScreenName    | ✅      | ✅  | ✅  |
 | reset            | ✅      | ✅  | ✅  |
 | logEvent         | ✅      | ✅  | ✅  |
 
